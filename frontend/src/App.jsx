@@ -26,7 +26,7 @@ function App() {
           initialViewState={{
           longitude: 14.44,
           latitude: 45.33,
-          zoom: 14
+          zoom: 12
           }}
           style={{width: "100vw", height:"100vh"}}
           mapStyle="mapbox://styles/mapbox/streets-v9"
