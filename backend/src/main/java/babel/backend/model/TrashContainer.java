@@ -1,12 +1,9 @@
 package babel.backend.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class ThrashContainer {
+public class TrashContainer {
 
     @Id
     private int id;
@@ -16,12 +13,12 @@ public class ThrashContainer {
     private double locationLat;
 
     @Column(nullable = false)
-    @Enumerated
-    private ThrashContainerType thrashType;
+    @Enumerated(EnumType.STRING)
+    private TrashContainerType thrashType;
 
-    public ThrashContainer() { }
+    public TrashContainer() { }
 
-    public ThrashContainer(int id, double locationLong, double locationLat, ThrashContainerType thrashType) {
+    public TrashContainer(int id, double locationLong, double locationLat, TrashContainerType thrashType) {
         this.id = id;
         this.locationLat = locationLat;
         this.locationLong = locationLong;
@@ -40,7 +37,7 @@ public class ThrashContainer {
         return locationLong;
     }
 
-    public ThrashContainerType getThrashType() {
+    public TrashContainerType getThrashType() {
         return thrashType;
     }
 }
