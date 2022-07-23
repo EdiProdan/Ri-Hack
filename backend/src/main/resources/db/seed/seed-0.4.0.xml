@@ -11,29 +11,29 @@
     <changeSet id="202207231815" author="dbabic">
 
         <insert  dbms="h2"
-                 tableName="trash_container">
+                 tableName="full_container">
             <column name="container_id"  value="12"/>
         </insert>
 
         <insert  dbms="h2"
-                 tableName="trash_container">
+                 tableName="full_container">
             <column name="container_id"  value="9"/>
         </insert>
 
         <insert  dbms="h2"
-                 tableName="trash_container">
+                 tableName="full_container">
             <column name="container_id"  value="1"/>
         </insert>
 
         <insert  dbms="h2"
-                 tableName="trash_container">
+                 tableName="full_container">
             <column name="container_id"  value="4"/>
         </insert>
 
         <insert  dbms="h2"
-                 tableName="trash_container">
+                 tableName="full_container">
             <column name="container_id"  value="7"/>
         </insert>
-        
+
     </changeSet>
 </databaseChangeLog>
