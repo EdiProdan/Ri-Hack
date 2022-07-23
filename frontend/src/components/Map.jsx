@@ -5,15 +5,25 @@ import { mapTrashType } from '../util/mapTrashType';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA';
 
-const Map = () => {
+const BoxMap = () => {
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(14.457664);//45.328979
     const [lat, setLat] = useState(45.328979);    
     const [zoom, setZoom] = useState(12);
     const [clickedMarkerCoords, setClickedMarkerCoords] = useState([0,0])
- 
-    let trashContainers = {}
+    const markers = new Map()
+
+    const handleClick = (id) => {
+        const marker = markers.get(id).marker;
+        console.log(id)
+        marker.setHTML(`
+        <div style="display: flex; flex-direction: column; align-items: center">
+            <p >Vrsta kontejnera: ${markers.get(id).container.id}</p>
+            <button style="color:red" disabled"><h4>Netko je već označio kontejner kao pun</h4></button>
+        </div>
+        `)
+    } 
 
     useEffect(() => {
         fetch("http://localhost:8080/api/trash-containers", {
@@ -25,28 +35,17 @@ const Map = () => {
         .then(response => response.json())
             // 4. Setting *dogImage* to the image url that we received from the response above
         .then(json => {
-            trashContainers = json
+            
+            const trashContainers = json
+            console.log(trashContainers)
             trashContainers.forEach((container) => {
                 const {color, textCro} = mapTrashType(container.trashType)
                 const coords = [container.locationLong, container.locationLat]
                 const marker = new mapboxgl.Marker({color: color})
     
                 marker.setLngLat(coords).addTo(map.current)
+                markers.set(container.id, {marker: marker, container: container})
                 
-    
-                const onClick = () => {
-                    setClickedMarkerCoords(coords) 
-                } 
-    
-                marker.getElement().addEventListener('click', onClick)
-                var popup = new mapboxgl.Popup({offset: 30})
-                                        .setHTML(`
-                                            <div style="display: flex; flex-direction: column; align-items: center">
-                                                <p >Vrsta kontejnera: ${textCro}</p>
-                                                <button style="color:green"><h4>Označi kontejner kao pun </h5></button>
-                                            </div>
-                                            `)
-                marker.setPopup(popup)
             }
             )
         })
@@ -71,4 +70,4 @@ const Map = () => {
     );
 }
 
-export default Map
+export default BoxMap

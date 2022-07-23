@@ -53,17 +53,17 @@ element.style{
 
 textarea {
   width: 90vw;
-  height: 40%;
+  min-height: 12vh;
 }
 
 
 .button-expanded{
-  
+
   position: fixed;
   width: 100%;
-  height: 50vh;
+  height: max-content;
   background-color: white;
-  transform: translateY(-110%);
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,12 +80,12 @@ textarea {
 .ticket-form{
   display: flex;
   margin: 40px 0;
+  flex-direction: column;
 }
 
 .form-title{
   margin: 20px 0 10px 0;
-  width: 100%;
-  
+  width: 100%; 
 }
 
 .row{
@@ -100,6 +100,8 @@ textarea {
   padding: 10px;
   cursor: pointer;
   border-radius: 7.5px;
+  width: 100%;
+  margin: 20px auto 0 auto;
   
 }
 .input {
