@@ -42,7 +42,7 @@ const Map = () => {
                 var popup = new mapboxgl.Popup({offset: 30})
                                         .setHTML(`
                                             <div style="display: flex; flex-direction: column; align-items: center">
-                                                <p>Vrsta kontejnera: ${textCro}</p>
+                                                <p >Vrsta kontejnera: ${textCro}</p>
                                                 <button style="color:green"><h4>Označi kontejner kao pun </h5></button>
                                             </div>
                                             `)

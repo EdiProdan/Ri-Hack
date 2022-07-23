@@ -13,16 +13,21 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "mapbox-gl": "^2.9.2",
     "react": "^18.2.0",
+    "react-collapsed": "^3.3.2",
     "react-dom": "^18.2.0",
     "react-map-gl": "^7.0.18",
     "react-scripts": "^2.1.3",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4",
-    "mapbox-gl": "^2.9.2"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
+    "start": "react-scripts start",
+=======
     "start": "set HTTPS=true && react-scripts --openssl-legacy-provider start",
+>>>>>>> c1702eb0f972151edcfbc3b0b34954bda9e32496
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

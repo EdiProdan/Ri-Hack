@@ -23,17 +23,17 @@ public class TrashContainerController {
     }
 
     @GetMapping(path="{id}")
-    public TrashContainer getTrashContainerById(Long id) {
+    public TrashContainer getTrashContainerById(@PathVariable("id") Long id) {
         return trashContainerService.getTrashContainerById(id);
     }
 
     @PostMapping
-    public TrashContainer insertTrashContainer(TrashContainer trashContainer) {
+    public TrashContainer insertTrashContainer(@RequestBody TrashContainer trashContainer) {
         return trashContainerService.insertTrashContainer(trashContainer);
     }
 
     @DeleteMapping(path="{id}")
-    public void deleteTrashContainer(Long id) {
+    public void deleteTrashContainer(@PathVariable("id") Long id) {
         trashContainerService.deleteTrashContainer(id);
     }
 
