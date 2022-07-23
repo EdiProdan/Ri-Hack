@@ -21,12 +21,17 @@ public class TrashContainerServiceImpl implements TrashContainerService {
         return trashContainerRepository.findAll();
     }
 
+    @Override
     public TrashContainer getTrashContainerById(Long id) {
         return trashContainerRepository.getReferenceById(id);
     }
+
+    @Override
     public TrashContainer insertTrashContainer(TrashContainer trashContainer) {
         return trashContainerRepository.save(trashContainer);
     }
+
+    @Override
 
     public void deleteTrashContainer(Long id) {
         trashContainerRepository.deleteById(id);
