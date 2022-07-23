@@ -24,8 +24,6 @@ const ButtonExpand = () => {
                                     ticketType: event.target[1].value,
                                     description: event.target[2].value}
 
-                        console.log(ticket);
-
                         let res = await fetch("http://localhost:8080/api/tickets", {
                             method: "POST",
                             headers: {
