@@ -27,18 +27,13 @@ element.style{
 }
 
 .button-collapsed{
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background-color: #00a44d;
-  color: white;
-  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
+
 
 .btn{
   background-color: transparent;
@@ -50,7 +45,14 @@ element.style{
   margin: 10px;
   cursor: pointer;
 }
-
+.collapsed{
+  font-family: "Montserrat", sans-serif;
+  background-color: #00a44d;
+  padding: 20px 50px;
+  width: 100%;
+  border-radius: 40px;
+  margin-bottom: 35px;
+}
 textarea {
   width: 90vw;
   min-height: 12vh;
@@ -99,7 +101,7 @@ textarea {
   border: none;
   padding: 10px;
   cursor: pointer;
-  border-radius: 7.5px;
+  border-radius: 40px;
   width: 100%;
   margin: 20px auto 0 auto;
   
