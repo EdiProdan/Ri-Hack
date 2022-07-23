@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 const ButtonExpand = () => {
 
-
     const [isExpanded, setExpanded] = useState(false);
-
 
     function handleOnClick() {
         setExpanded(!isExpanded);
@@ -37,7 +35,7 @@ const ButtonExpand = () => {
             </div> :
 
             <div className="button-collapsed">
-                <button className='btn' onClick={handleOnClick}>Podnesi novi upit</button>
+                <button className='btn collapsed' onClick={handleOnClick}>Podnesi novi upit</button>
             </div>
 
     );

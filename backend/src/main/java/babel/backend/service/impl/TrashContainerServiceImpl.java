@@ -7,7 +7,6 @@ import babel.backend.repository.TrashContainerRepository;
 import babel.backend.service.TrashContainerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -54,5 +53,22 @@ public class TrashContainerServiceImpl implements TrashContainerService {
             throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Trash container with specified id not found.");
         }
         trashContainerRepository.deleteById(id);
+    }
+
+    @Override
+    public TrashContainerDTO updateTrashContainer(TrashContainerDTO dto, Long id) {
+        if(trashContainerRepository.findById(id).isEmpty()){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Trash container with specified id not found.");
+        }
+
+        TrashContainer trashContainer = trashContainerRepository.getReferenceById(id);
+
+        trashContainer.setLocationLat(dto.getLocationLat());
+        trashContainer.setLocationLong(dto.getLocationLong());
+        trashContainer.setTrashType(dto.getTrashType());
+
+        trashContainerRepository.save(trashContainer);
+
+        return getTrashContainerById(id);
     }
 }

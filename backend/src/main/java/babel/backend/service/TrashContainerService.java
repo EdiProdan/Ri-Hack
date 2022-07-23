@@ -10,4 +10,5 @@ public interface TrashContainerService {
     public TrashContainerDTO getTrashContainerById(Long id);
     public TrashContainerDTO insertTrashContainer(TrashContainerDTO trashContainerDTO);
     public void deleteTrashContainer(Long id);
+    public TrashContainerDTO updateTrashContainer(TrashContainerDTO dto, Long id);
 }
