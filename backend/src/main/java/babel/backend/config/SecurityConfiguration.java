@@ -1,6 +1,5 @@
 package babel.backend.config;
 
-/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -30,9 +29,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/**").anonymous()
                 .and()
-                .csrf().disable()
-                .formLogin();
-
+                .csrf().disable();
     }
 
     @Bean
@@ -55,4 +52,3 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }
-*/
