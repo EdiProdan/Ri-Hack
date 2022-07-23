@@ -24,4 +24,6 @@
     <changeSet id="202207231205" author="igolob">
         <tagDatabase tag="0.1.0"/>
     </changeSet>
+
+    <includeAll path="db/changelog"/>
 </databaseChangeLog>

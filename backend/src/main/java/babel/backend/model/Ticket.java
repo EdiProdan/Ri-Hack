@@ -1,0 +1,81 @@
+package babel.backend.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Ticket {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String mail;
+
+    private Double locationLat;
+
+    private Double locationLong;
+
+    private TicketType ticketType;
+
+    private String description;
+
+    public Ticket(Long id, String mail, Double locationLat, Double locationLong, TicketType ticketType, String description) {
+        this.id = id;
+        this.mail = mail;
+        this.locationLat = locationLat;
+        this.locationLong = locationLong;
+        this.ticketType = ticketType;
+        this.description = description;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public Double getLocationLat() {
+        return locationLat;
+    }
+
+    public void setLocationLat(Double locationLat) {
+        this.locationLat = locationLat;
+    }
+
+    public Double getLocationLong() {
+        return locationLong;
+    }
+
+    public void setLocationLong(Double locationLong) {
+        this.locationLong = locationLong;
+    }
+
+    public TicketType getTicketType() {
+        return ticketType;
+    }
+
+    public void setTicketType(TicketType ticketType) {
+        this.ticketType = ticketType;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}
