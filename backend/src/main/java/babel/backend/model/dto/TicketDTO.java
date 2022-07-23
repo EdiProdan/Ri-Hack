@@ -3,8 +3,11 @@ package babel.backend.model.dto;
 import babel.backend.model.TicketType;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 
 public class TicketDTO {
+
+    @Null
     private Long id;
 
     private String mail;

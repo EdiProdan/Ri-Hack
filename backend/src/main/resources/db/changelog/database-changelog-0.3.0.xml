@@ -15,7 +15,7 @@
             </column>
             <column name="container_id" type="BIGINT" >
                 <constraints nullable="false" referencedTableName="trash_container"
-                             referencedColumnNames="id" foreignKeyName="trash_container_fk"/>
+                             referencedColumnNames="id" foreignKeyName="trash_container_fk" deleteCascade="true"/>
             </column>
             <column name="time_added" type="TIMESTAMP" defaultValue="CURRENT_TIMESTAMP">
                 <constraints nullable="false"/>
