@@ -28,7 +28,7 @@
                  tableName="trash_container">
             <column name="location_lat" value="45.333077"/>
             <column name="location_long" value="14.452726"/>
-            <column name="trash_type" value="PLASTIC"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
         </insert>
 
         <insert  dbms="h2"
@@ -42,7 +42,7 @@
                  tableName="trash_container">
             <column name="location_lat" value="45.335623"/>
             <column name="location_long" value="14.428754"/>
-            <column name="trash_type" value="GENERAL"/>
+            <column name="trash_type" value="BIO"/>
         </insert>
 
     </changeSet>

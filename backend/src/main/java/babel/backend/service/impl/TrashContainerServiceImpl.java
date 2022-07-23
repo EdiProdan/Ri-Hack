@@ -20,4 +20,15 @@ public class TrashContainerServiceImpl implements TrashContainerService {
     public List<TrashContainer> getAllTrashContainers() {
         return trashContainerRepository.findAll();
     }
+
+    public TrashContainer getTrashContainerById(Long id) {
+        return trashContainerRepository.getReferenceById(id);
+    }
+    public TrashContainer insertTrashContainer(TrashContainer trashContainer) {
+        return trashContainerRepository.save(trashContainer);
+    }
+
+    public void deleteTrashContainer(Long id) {
+        trashContainerRepository.deleteById(id);
+    }
 }
