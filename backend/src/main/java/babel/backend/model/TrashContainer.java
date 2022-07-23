@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class TrashContainer {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private double locationLong;
