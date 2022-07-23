@@ -1,5 +1,7 @@
 package babel.backend.model;
 
+import jdk.incubator.vector.DoubleVector;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,11 +9,11 @@ public class TrashContainer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    private double locationLong;
+    private Double locationLong;
 
-    private double locationLat;
+    private Double locationLat;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -19,22 +21,22 @@ public class TrashContainer {
 
     public TrashContainer() { }
 
-    public TrashContainer(int id, double locationLong, double locationLat, TrashContainerType trashType) {
+    public TrashContainer(Long id, Double locationLong, Double locationLat, TrashContainerType trashType) {
         this.id = id;
         this.locationLat = locationLat;
         this.locationLong = locationLong;
         this.trashType = trashType;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public double getLocationLat() {
+    public Double getLocationLat() {
         return locationLat;
     }
 
-    public double getLocationLong() {
+    public Double getLocationLong() {
         return locationLong;
     }
 
@@ -42,15 +44,15 @@ public class TrashContainer {
         return trashType;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public void setLocationLong(double locationLong) {
+    public void setLocationLong(Double locationLong) {
         this.locationLong = locationLong;
     }
 
-    public void setLocationLat(double locationLat) {
+    public void setLocationLat(Double locationLat) {
         this.locationLat = locationLat;
     }
 
