@@ -1,11 +1,17 @@
 package babel.backend.service.impl;
 
 import babel.backend.model.TrashContainer;
+import babel.backend.model.dto.TrashContainerDTO;
+import babel.backend.model.mapper.TrashContainerMapper;
 import babel.backend.repository.TrashContainerRepository;
 import babel.backend.service.TrashContainerService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TrashContainerServiceImpl implements TrashContainerService {
@@ -17,18 +23,30 @@ public class TrashContainerServiceImpl implements TrashContainerService {
     }
 
     @Override
-    public List<TrashContainer> getAllTrashContainers() {
-        return trashContainerRepository.findAll();
+    public List<TrashContainerDTO> getAllTrashContainers() {
+        List<TrashContainer> trashContainers = trashContainerRepository.findAll();
+
+        return trashContainers.stream()
+                .map(TrashContainerMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public TrashContainer getTrashContainerById(Long id) {
-        return trashContainerRepository.getReferenceById(id);
+    public TrashContainerDTO getTrashContainerById(Long id) {
+        Optional<TrashContainer> trashContainer = trashContainerRepository.findById(id);
+
+        if(trashContainer.isEmpty()){
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
+        }
+
+        return TrashContainerMapper.toDto(trashContainer.get());
     }
 
     @Override
-    public TrashContainer insertTrashContainer(TrashContainer trashContainer) {
-        return trashContainerRepository.save(trashContainer);
+    public TrashContainerDTO insertTrashContainer(TrashContainerDTO trashContainerDTO) {
+        TrashContainer trashContainer = trashContainerRepository.save(TrashContainerMapper.fromDto(trashContainerDTO));
+
+        return TrashContainerMapper.toDto(trashContainer);
     }
 
     @Override

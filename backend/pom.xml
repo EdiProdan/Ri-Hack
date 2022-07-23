@@ -46,10 +46,8 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.3.3.RELEASE</version>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

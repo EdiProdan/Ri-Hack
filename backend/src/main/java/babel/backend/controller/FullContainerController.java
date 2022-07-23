@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/full-containers")
 public class FullContainerController {
@@ -19,7 +21,8 @@ public class FullContainerController {
     }
 
     @PostMapping
-    public FullContainerDTO addFullContainer(@RequestBody FullContainerDTO dto){
+    public FullContainerDTO addFullContainer(@Valid @RequestBody FullContainerDTO dto){
         return fullContainerService.addFullContainer(dto);
     }
+
 }
