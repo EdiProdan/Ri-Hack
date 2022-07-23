@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import { mapTrashType } from '../util/mapTrashType';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA';
 
@@ -11,12 +12,9 @@ const Map = () => {
     const [lat, setLat] = useState(45.328979);    
     const [zoom, setZoom] = useState(12);
     const [clickedMarkerCoords, setClickedMarkerCoords] = useState([0,0])
+ 
+    let trashContainers = {}
 
-    const markerCoords = [
-            [14.442726, 45.326077],
-            [14.452726, 45.336077],
-            [14.422726, 45.336077],
-    ]
     useEffect(() => {
         fetch("http://localhost:8080/api/trash-containers", {
             mode: 'cors',
@@ -26,11 +24,35 @@ const Map = () => {
           })
         .then(response => response.json())
             // 4. Setting *dogImage* to the image url that we received from the response above
-        .then(json => console.log(json))
+        .then(json => {
+            trashContainers = json
+            trashContainers.forEach((container) => {
+                const {color, textCro} = mapTrashType(container.trashType)
+                const coords = [container.locationLong, container.locationLat]
+                const marker = new mapboxgl.Marker({color: color})
+    
+                marker.setLngLat(coords).addTo(map.current)
+                
+    
+                const onClick = () => {
+                    setClickedMarkerCoords(coords) 
+                } 
+    
+                marker.getElement().addEventListener('click', onClick)
+                var popup = new mapboxgl.Popup({offset: 30})
+                                        .setHTML(`
+                                            <div style="display: flex; flex-direction: column; align-items: center">
+                                                <p>Vrsta kontejnera: ${textCro}</p>
+                                                <button style="color:green"><h4>Označi kontejner kao pun </h5></button>
+                                            </div>
+                                            `)
+                marker.setPopup(popup)
+            }
+            )
+        })
       },[])
 
     useEffect(() => {
-
 
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
@@ -40,22 +62,7 @@ const Map = () => {
             zoom: zoom
         });
 
-        markerCoords.forEach((coords) => {
-            const marker = new mapboxgl.Marker({color: "green"})
-
-            marker.setLngLat(coords).addTo(map.current)
-            
-
-            const onClick = () => {
-                setClickedMarkerCoords(coords) 
-            } 
-
-            marker.getElement().addEventListener('click', onClick)
-            var popup = new mapboxgl.Popup({offset: 30})
-                                    .setHTML("<button> Označi  </button>")
-            marker.setPopup(popup)
-        }
-        )});
+        });
     return (
         
         <div>
