@@ -1,58 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
 .container{
+  font-family: 'Montserrat', sans-serif;
   margin: auto;
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 .map-container {
   margin: auto;
-  height: 90vh;
+  height: 105vh;
   
 }
 
 element.style{
   width:100%;
-  height: 90vh;
+  height: 105vh;
 }
 
 .button-collapsed{
   display: flex; 
   justify-content: center;
   align-items: center;
-  /* transition: all 2s ease; */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #00a44d;
+  color: white;
+  
 }
 
 .btn{
-  background-color: #0f9700;
+  background-color: transparent;
   width: 90%;
   color: white;
   font-size: 1.5rem;
-  border-radius: 10px;
+  border: none;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
 }
 
+textarea {
+  width: 90vw;
+  height: 40%;
+}
+
+
 .button-expanded{
-  /* position it at half of the screen verticaly*/
+  
   position: fixed;
-  /* bottom: 50vh; */
-  /* top: 50vh; */
   width: 100%;
   height: 50vh;
   background-color: white;
-  transform: translateY(-100%);
+  transform: translateY(-110%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
-
-
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
+.form-header{
+  display: grid;
+  grid-template-columns: 9fr  1fr;
+  
+}
+.ticket-form{
+  display: flex;
+  margin: 40px 0;
+}
+
+.form-title{
+  margin: 20px 0 10px 0;
+  width: 100%;
+  
+}
+
+.row{
+  margin-bottom: 10px;
+}
+
+.submit{
+  background-color: #00a44d;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 7.5px;
+  
+}
+.input {
+
+  width: 100%;
+ height: 40px;
+}
+
+.close{
+  color: black;
+}
