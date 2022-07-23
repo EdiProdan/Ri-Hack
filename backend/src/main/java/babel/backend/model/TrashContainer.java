@@ -1,43 +1,61 @@
 package babel.backend.model;
 
+
 import javax.persistence.*;
 
 @Entity
 public class TrashContainer {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private double locationLong;
+    private Double locationLong;
 
-    private double locationLat;
+    private Double locationLat;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private TrashContainerType thrashType;
+    private TrashContainerType trashType;
 
     public TrashContainer() { }
 
-    public TrashContainer(int id, double locationLong, double locationLat, TrashContainerType thrashType) {
+    public TrashContainer(Long id, Double locationLong, Double locationLat, TrashContainerType trashType) {
         this.id = id;
         this.locationLat = locationLat;
         this.locationLong = locationLong;
-        this.thrashType = thrashType;
+        this.trashType = trashType;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public double getLocationLat() {
+    public Double getLocationLat() {
         return locationLat;
     }
 
-    public double getLocationLong() {
+    public Double getLocationLong() {
         return locationLong;
     }
 
-    public TrashContainerType getThrashType() {
-        return thrashType;
+    public TrashContainerType getTrashType() {
+        return trashType;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setLocationLong(Double locationLong) {
+        this.locationLong = locationLong;
+    }
+
+    public void setLocationLat(Double locationLat) {
+        this.locationLat = locationLat;
+    }
+
+    public void setTrashType(TrashContainerType trashType) {
+        this.trashType = trashType;
     }
 }
