@@ -17,7 +17,7 @@
                 <constraints nullable="false" referencedTableName="trash_container"
                              referencedColumnNames="id" foreignKeyName="trash_container_fk"/>
             </column>
-            <column name="time_added" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+            <column name="time_added" type="TIMESTAMP" defaultValue="CURRENT_TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
         </createTable>
