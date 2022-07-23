@@ -1,9 +1,6 @@
 package babel.backend.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Ticket {
@@ -17,9 +14,16 @@ public class Ticket {
 
     private Double locationLong;
 
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private TicketType ticketType;
 
+    @Column(nullable = false)
     private String description;
+
+    public Ticket() {
+
+    }
 
     public Ticket(Long id, String mail, Double locationLat, Double locationLong, TicketType ticketType, String description) {
         this.id = id;
@@ -30,11 +34,13 @@ public class Ticket {
         this.description = description;
     }
 
+
+
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Id
+
     public Long getId() {
         return id;
     }
