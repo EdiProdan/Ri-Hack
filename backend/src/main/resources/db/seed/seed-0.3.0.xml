@@ -33,7 +33,7 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.318785"/>
+            <column name="location_lat" value="45.348785"/>
             <column name="location_long" value="14.408089"/>
             <column name="trash_type" value="PAPER"/>
         </insert>
@@ -47,28 +47,28 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.319367"/>
+            <column name="location_lat" value="45.339367"/>
             <column name="location_long" value="14.426110"/>
             <column name="trash_type" value="PLASTIC_METAL"/>
         </insert>
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.322319"/>
+            <column name="location_lat" value="45.342319"/>
             <column name="location_long" value="14.401314"/>
             <column name="trash_type" value="BIO"/>
         </insert>
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.318106"/>
+            <column name="location_lat" value="45.338106"/>
             <column name="location_long" value="14.363720"/>
             <column name="trash_type" value="PAPER"/>
         </insert>
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.318784"/>
+            <column name="location_lat" value="45.338784"/>
             <column name="location_long" value="14.347482"/>
             <column name="trash_type" value="GENERAL"/>
         </insert>
