@@ -9,4 +9,6 @@ import java.util.List;
 public interface TicketService {
     public Ticket addTicket(Ticket ticket);
     public List<Ticket> getAllTickets();
+
+    public void deleteTicket(Long id);
 }
