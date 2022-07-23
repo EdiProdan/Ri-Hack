@@ -13,11 +13,27 @@
         <insert  dbms="h2"
                  tableName="trash_container">
             <column name="container_id"  value="12"/>
-            <column name="container_id"  value="4"/>
-            <column name="container_id"  value="9"/>
-            <column name="container_id"  value="10"/>
-            <column name="container_id"  value="2"/>
         </insert>
 
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="container_id"  value="9"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="container_id"  value="1"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="container_id"  value="4"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="container_id"  value="7"/>
+        </insert>
+        
     </changeSet>
 </databaseChangeLog>
