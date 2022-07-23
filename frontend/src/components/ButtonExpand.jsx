@@ -11,11 +11,11 @@ const ButtonExpand = () => {
     return (
         isExpanded ?
             <div className="button-expanded">
-                <div className='form-header'>
-                    <h2 className='form-title'>Podnesi upit</h2>
-                    <button onClick={handleOnClick} className="btn close">X</button>
-                </div>
                 <div className="ticket-form">
+                    <div className='form-header'>
+                        <h2 className='form-title'>Podnesi upit</h2>
+                        <button onClick={handleOnClick} className="btn close">X</button>
+                    </div>
                     <form>
                         <label>Email:</label>
                         <input type="email" name="mail" className='input'/> <br></br>
