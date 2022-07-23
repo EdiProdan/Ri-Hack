@@ -9,23 +9,23 @@ const ViewMap = () => {
     let [containers, setContainers] = useState([])
     const [popupInfo, setPopupInfo] = useState(undefined);
 
-    const mark = (containerId) => {
+    const mark = async (containerId) => {
       let containersCopy = containers.map(container => {
         if (container.id === containerId) container.marked = true;
         return container
       })
       setContainers(containersCopy)
       setPopupInfo(null)
-      /*fetch('https://localhost:8080/api/full-containers', {
+      let res = await fetch('http://localhost:8080/api/full-containers', {
         method:"POST",
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin':'*',
-          'Content-Type': "text-plain"
         },
-        body: JSON.stringify({id: containerId})
-      }).then(resp => resp.json()).then(json => console.log(json))*/
+        body: JSON.stringify({containerId: containerId})
+      });
+      const content = await res.json();
+      console.log(content);
+
       alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!")
     }
     useEffect( () => {

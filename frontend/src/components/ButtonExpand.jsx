@@ -35,7 +35,7 @@ const ButtonExpand = () => {
 
                         console.log(content);
 
-                        //setExpanded(false);
+                        setExpanded(false);
                     }}>
                         <label>Email:</label>
                         <input type="input" name="mail" id="mail" className='input'/> <br></br>
