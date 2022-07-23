@@ -10,9 +10,9 @@ function App() {
       <div className="container">  
         <Map
         initialViewState={{
-        longitude: 14,
-        latitude: 45,
-        zoom: 14
+        longitude: 14.440664,
+        latitude: 45.323979,
+        zoom: 13
         }}
         style={{width: "100vw", height:"100vh"}}
         mapStyle="mapbox://styles/mapbox/streets-v9"
