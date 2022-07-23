@@ -9,13 +9,13 @@
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
     <changeSet id="202207231150" author="igolob">
-        <createTable tableName="trashcontainer">
+        <createTable tableName="trash_container">
             <column name="id" type="BIGINT" autoIncrement="true">
-                <constraints primaryKey="true" primaryKeyName="house_id_pk" />
+                <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
             <column name="location_lat" type="DOUBLE"/>
             <column name="location_long" type="DOUBLE"/>
-            <column name="type" type="VARCHAR(15)">
+            <column name="trash_type" type="VARCHAR(15)">
                     <constraints nullable="false"/>
             </column>
         </createTable>

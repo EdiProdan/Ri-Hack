@@ -1,6 +1,5 @@
 package babel.backend.model;
 
-import jdk.incubator.vector.DoubleVector;
 
 import javax.persistence.*;
 
