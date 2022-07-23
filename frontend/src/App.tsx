@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 import Map from './components/Map';
+import ButtonExpand from './components/ButtonExpand';
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <div className="container">  
       <Map />
+      <ButtonExpand />
     </div>
+    </>
   );
 }
 
