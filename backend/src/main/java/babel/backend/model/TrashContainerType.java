@@ -1,5 +1,5 @@
 package babel.backend.model;
 
 public enum TrashContainerType {
-    GLASS, PLASTIC, PAPER, GENERAL;
+    GLASS, PLASTIC_METAL, PAPER, GENERAL, BIO;
 }
