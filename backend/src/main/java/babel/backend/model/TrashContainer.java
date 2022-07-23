@@ -14,15 +14,15 @@ public class TrashContainer {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private TrashContainerType thrashType;
+    private TrashContainerType trashType;
 
     public TrashContainer() { }
 
-    public TrashContainer(int id, double locationLong, double locationLat, TrashContainerType thrashType) {
+    public TrashContainer(int id, double locationLong, double locationLat, TrashContainerType trashType) {
         this.id = id;
         this.locationLat = locationLat;
         this.locationLong = locationLong;
-        this.thrashType = thrashType;
+        this.trashType = trashType;
     }
 
     public int getId() {
@@ -37,8 +37,8 @@ public class TrashContainer {
         return locationLong;
     }
 
-    public TrashContainerType getThrashType() {
-        return thrashType;
+    public TrashContainerType getTrashType() {
+        return trashType;
     }
 
     public void setId(int id) {
