@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="202207231406" author="dbabic">
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.334753"/>
+            <column name="location_long" value="14.429857"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.326077"/>
+            <column name="location_long" value="14.442726"/>
+            <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.333077"/>
+            <column name="location_long" value="14.452726"/>
+            <column name="trash_type" value="PLASTIC"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.336077"/>
+            <column name="location_long" value="14.422726"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.335623"/>
+            <column name="location_long" value="14.428754"/>
+            <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

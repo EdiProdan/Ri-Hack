@@ -26,4 +26,5 @@
     </changeSet>
 
     <includeAll path="db/changelog"/>
+    <includeAll path="db/seed"/>
 </databaseChangeLog>

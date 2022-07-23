@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="202207231442" author="dbabic">
+
+        <insert  dbms="h2"
+                 tableName="ticket">
+            <column name="mail" value="ediprodan@hotmail.de"/>
+            <column name="location_lat" value="45.334753"/>
+            <column name="location_long" value="14.429857"/>
+            <column name="ticket_type" value="GENERAL"/>
+            <column name="description" value="Mislim da me moje smeće želi ubiti"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="ticket">
+            <column name="mail" value="iangolub@syskit.hr"/>
+            <column name="location_lat" value="45.356471"/>
+            <column name="location_long" value="14.476236"/>
+            <column name="ticket_type" value="DIRTY"/>
+            <column name="description" value="Jako prljavo smeće, fuj! 1/10"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="ticket">
+            <column name="mail" value="bojanpuaca@croz.it"/>
+            <column name="location_lat" value="45.512738"/>
+            <column name="location_long" value="14.5173829"/>
+            <column name="ticket_type" value="GENERAL"/>
+            <column name="description" value="Koja vrsta smeća je cura s Filozofskog?"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
