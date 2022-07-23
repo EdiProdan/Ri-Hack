@@ -1,6 +1,7 @@
 package babel.backend.controller;
 
 import babel.backend.model.TrashContainer;
+import babel.backend.model.dto.TicketDTO;
 import babel.backend.model.dto.TrashContainerDTO;
 import babel.backend.service.TrashContainerService;
 import org.springframework.web.bind.annotation.*;
@@ -39,4 +40,8 @@ public class TrashContainerController {
         trashContainerService.deleteTrashContainer(id);
     }
 
+    @PutMapping(path="{id}")
+    public TrashContainerDTO updateTrashContainer(@RequestBody TrashContainerDTO dto, @PathVariable("id") Long id){
+        return trashContainerService.updateTrashContainer(dto, id);
+    }
 }
