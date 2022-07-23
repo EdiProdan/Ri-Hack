@@ -1,5 +1,5 @@
 import React from 'react'
-import Map, {Marker, FullscreenControl, GeolocateControl, NavigationControl, ScaleControl} from 'react-map-gl';
+import Map, {Marker, FullscreenControl, GeolocateControl, NavigationControl, ScaleControl, Popup} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { mapTrashType } from '../util/mapTrashType';
 import { useState, useEffect } from 'react';
