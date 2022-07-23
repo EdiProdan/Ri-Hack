@@ -26,7 +26,7 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.359586"/>
+            <column name="location_lat" value="45.369586"/>
             <column name="location_long" value="14.365829"/>
             <column name="trash_type" value="GENERAL"/>
         </insert>
@@ -61,16 +61,58 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.338106"/>
+            <column name="location_lat" value="45.348106"/>
             <column name="location_long" value="14.363720"/>
             <column name="trash_type" value="PAPER"/>
         </insert>
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.338784"/>
+            <column name="location_lat" value="45.358784"/>
             <column name="location_long" value="14.347482"/>
             <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.351883"/>
+            <column name="location_long" value="14.382605"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.326466"/>
+            <column name="location_long" value="14.460127"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.325772"/>
+            <column name="location_long" value="14.456887"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.352131"/>
+            <column name="location_long" value="14.391418"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.332035"/>
+            <column name="location_long" value="14.465086"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.341651"/>
+            <column name="location_long" value="14.394987"/>
+            <column name="trash_type" value="PAPER"/>
         </insert>
 
     </changeSet>
