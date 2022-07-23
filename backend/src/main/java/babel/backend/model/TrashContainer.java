@@ -40,4 +40,20 @@ public class TrashContainer {
     public TrashContainerType getThrashType() {
         return thrashType;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setLocationLong(double locationLong) {
+        this.locationLong = locationLong;
+    }
+
+    public void setLocationLat(double locationLat) {
+        this.locationLat = locationLat;
+    }
+
+    public void setThrashType(TrashContainerType thrashType) {
+        this.thrashType = thrashType;
+    }
 }

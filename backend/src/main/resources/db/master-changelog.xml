@@ -13,12 +13,11 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" primaryKeyName="house_id_pk" />
             </column>
-            <column name="description" type="VARCHAR(2000)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="mail" type="VARCHAR(320)"/>
             <column name="location_lat" type="DOUBLE"/>
             <column name="location_long" type="DOUBLE"/>
+            <column name="type" type="VARCHAR(15)">
+                    <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 
