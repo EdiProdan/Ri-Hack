@@ -1,9 +1,8 @@
 package babel.backend.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 @Entity
@@ -12,33 +11,25 @@ public class ThrashContainer {
     @Id
     private int id;
 
-    @Column(nullable = false)
-    private String description;
-
-    private String mail;
-
     private double locationLong;
 
     private double locationLat;
 
-    public ThrashContainer(int id, String description, String mail, double locationLong, double locationLat) {
+    @Column(nullable = false)
+    @Enumerated
+    private ThrashContainerType thrashType;
+
+    public ThrashContainer() { }
+
+    public ThrashContainer(int id, double locationLong, double locationLat, ThrashContainerType thrashType) {
         this.id = id;
-        this.description = description;
-        this.mail = mail;
         this.locationLat = locationLat;
         this.locationLong = locationLong;
+        this.thrashType = thrashType;
     }
 
     public int getId() {
         return id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getMail() {
-        return mail;
     }
 
     public double getLocationLat() {
@@ -47,5 +38,9 @@ public class ThrashContainer {
 
     public double getLocationLong() {
         return locationLong;
+    }
+
+    public ThrashContainerType getThrashType() {
+        return thrashType;
     }
 }
