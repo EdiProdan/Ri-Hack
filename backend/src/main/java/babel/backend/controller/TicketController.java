@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/tickets")
 public class TicketController {
 
@@ -25,5 +26,10 @@ public class TicketController {
     @PostMapping
     public Ticket addTicket(@RequestBody Ticket ticket){
         return ticketService.addTicket(ticket);
+    }
+
+    @DeleteMapping(path = "{id}")
+    public void deleteTicket(@PathVariable("id") Long id) {
+        ticketService.deleteTicket(id);
     }
 }
