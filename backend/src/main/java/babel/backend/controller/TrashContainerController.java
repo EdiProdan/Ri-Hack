@@ -1,9 +1,11 @@
 package babel.backend.controller;
 
 import babel.backend.model.TrashContainer;
+import babel.backend.model.dto.TrashContainerDTO;
 import babel.backend.service.TrashContainerService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,18 +20,18 @@ public class TrashContainerController {
     }
 
     @GetMapping
-    public List<TrashContainer> getAllTrashContainers(){
+    public List<TrashContainerDTO> getAllTrashContainers(){
         return trashContainerService.getAllTrashContainers();
     }
 
     @GetMapping(path="{id}")
-    public TrashContainer getTrashContainerById(@PathVariable("id") Long id) {
+    public TrashContainerDTO getTrashContainerById(@PathVariable("id") Long id) {
         return trashContainerService.getTrashContainerById(id);
     }
 
     @PostMapping
-    public TrashContainer insertTrashContainer(@RequestBody TrashContainer trashContainer) {
-        return trashContainerService.insertTrashContainer(trashContainer);
+    public TrashContainerDTO insertTrashContainer(@Valid @RequestBody TrashContainerDTO trashContainerDTO) {
+        return trashContainerService.insertTrashContainer(trashContainerDTO);
     }
 
     @DeleteMapping(path="{id}")
