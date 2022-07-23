@@ -6,11 +6,6 @@ import { mapTrashType } from '../util/mapTrashType';
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA';
 
 const BoxMap = () => {
-    const mapContainer = useRef(null);
-    const map = useRef(null);
-    const [lng, setLng] = useState(14.457664);//45.328979
-    const [lat, setLat] = useState(45.328979);    
-    const [zoom, setZoom] = useState(12);
     const [clickedMarkerCoords, setClickedMarkerCoords] = useState([0,0])
     const markers = new Map()
 
