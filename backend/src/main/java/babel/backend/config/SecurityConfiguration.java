@@ -1,6 +1,6 @@
 package babel.backend.config;
 
-
+/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -21,15 +21,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //configure authorization
+
         http.httpBasic()
                 .and()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET,"/api/trash-containers/**").anonymous()
                 .antMatchers(HttpMethod.POST,"/api/tickets/**").anonymous()
-                .antMatchers("/**").hasRole("ADMIN")
+                .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/**").anonymous()
                 .and()
                 .csrf().disable()
                 .formLogin();
+
     }
 
     @Bean
@@ -52,3 +55,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }
+*/
