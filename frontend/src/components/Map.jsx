@@ -17,12 +17,28 @@ const Map = () => {
             [14.452726, 45.336077],
             [14.422726, 45.336077],
     ]
+<<<<<<< HEAD
     
     useEffect(()=>{
         console.log(clickedMarkerCoords)
     },[clickedMarkerCoords])
+=======
+    useEffect(() => {
+        fetch("http://localhost:8080/api/trash-containers", {
+            mode: 'cors',
+            headers: {
+              'Access-Control-Allow-Origin':'*'
+            }
+          })
+        .then(response => response.json())
+            // 4. Setting *dogImage* to the image url that we received from the response above
+        .then(json => console.log(json))
+      },[])
+>>>>>>> c1702eb0f972151edcfbc3b0b34954bda9e32496
 
     useEffect(() => {
+
+
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
@@ -43,7 +59,7 @@ const Map = () => {
 
             marker.getElement().addEventListener('click', onClick)
             var popup = new mapboxgl.Popup({offset: 30})
-                                    .setHTML("<button> Klikni </button>")
+                                    .setHTML("<button> Označi  </button>")
             marker.setPopup(popup)
         }
         )});
