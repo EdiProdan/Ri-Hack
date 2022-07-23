@@ -53,7 +53,7 @@ public class TrashContainer {
         this.locationLat = locationLat;
     }
 
-    public void setThrashType(TrashContainerType thrashType) {
-        this.thrashType = thrashType;
+    public void setTrashType(TrashContainerType trashType) {
+        this.trashType = trashType;
     }
 }
