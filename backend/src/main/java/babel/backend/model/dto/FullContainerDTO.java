@@ -2,13 +2,19 @@ package babel.backend.model.dto;
 
 import babel.backend.model.TrashContainer;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import java.util.Date;
 
 public class FullContainerDTO {
+
+    @Null
     private Long id;
 
+    @NotNull
     private Long containerId;
 
+    @Null
     private Date timeAdded;
 
     public FullContainerDTO() {
