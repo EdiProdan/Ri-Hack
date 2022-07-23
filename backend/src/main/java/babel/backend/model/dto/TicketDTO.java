@@ -1,11 +1,10 @@
-package babel.backend.model;
+package babel.backend.model.dto;
 
-import javax.persistence.*;
+import babel.backend.model.TicketType;
 
-@Entity
-public class Ticket {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+import javax.validation.constraints.NotNull;
+
+public class TicketDTO {
     private Long id;
 
     private String mail;
@@ -14,18 +13,16 @@ public class Ticket {
 
     private Double locationLong;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
+    @NotNull
     private TicketType ticketType;
 
-    @Column(nullable = false)
+    @NotNull
     private String description;
 
-    public Ticket() {
-
+    public TicketDTO() {
     }
 
-    public Ticket(Long id, String mail, Double locationLat, Double locationLong, TicketType ticketType, String description) {
+    public TicketDTO(Long id, String mail, Double locationLat, Double locationLong, TicketType ticketType, String description) {
         this.id = id;
         this.mail = mail;
         this.locationLat = locationLat;
@@ -34,13 +31,12 @@ public class Ticket {
         this.description = description;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getMail() {

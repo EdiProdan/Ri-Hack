@@ -1,6 +1,7 @@
 package babel.backend.controller;
 
 import babel.backend.model.Ticket;
+import babel.backend.model.dto.TicketDTO;
 import babel.backend.service.TicketService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,12 +20,12 @@ public class TicketController {
     }
 
     @GetMapping
-    public List<Ticket> getAllTickets(){
+    public List<TicketDTO> getAllTickets(){
         return ticketService.getAllTickets();
     }
 
     @PostMapping
-    public Ticket addTicket(@RequestBody Ticket ticket){
+    public TicketDTO addTicket(@RequestBody TicketDTO ticket){
         return ticketService.addTicket(ticket);
     }
 

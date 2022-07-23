@@ -25,9 +25,7 @@ public class TrashContainerServiceImpl implements TrashContainerService {
 
     @Override
     public List<TrashContainerDTO> getAllTrashContainers() {
-        List<TrashContainer> trashContainers = trashContainerRepository.findAll();
-
-        return trashContainers.stream()
+         return trashContainerRepository.findAll().stream()
                 .map(TrashContainerMapper::toDto)
                 .collect(Collectors.toList());
     }
@@ -51,7 +49,6 @@ public class TrashContainerServiceImpl implements TrashContainerService {
     }
 
     @Override
-
     public void deleteTrashContainer(Long id) {
         if(trashContainerRepository.findById(id).isEmpty()){
             throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Trash container with specified id not found.");
