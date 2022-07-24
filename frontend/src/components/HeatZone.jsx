@@ -4,7 +4,7 @@ import HeatMap from './HeatMap';
 const HeatZone = () => {
   return (
     <>
-        <h2>Heat zones: </h2>
+        <h2>Područja s najviše prijava:</h2>
         <HeatMap/>
     </>
   )
