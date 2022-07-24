@@ -55,7 +55,7 @@ const ViewMap = () => {
           zoom: 12
           }}
           style={{width: "100vw", height:"100vh"}}
-          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapStyle="mapbox://styles/mapbox/light-v9"
           mapboxAccessToken="pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA">
             <GeolocateControl position="top-right" />
             <ScaleControl />

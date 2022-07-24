@@ -1,7 +1,6 @@
 import ButtonExpand from './ButtonExpand';
 import ViewMap from './ViewMap';
-import SideBar from "./Sidebar";
-
+import SideBar from "./SideBar.jsx";
 import React from 'react'
 
 const User = () => {

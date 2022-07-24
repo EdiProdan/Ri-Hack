@@ -13,13 +13,19 @@ const Tickets = () => {
             .then(response => response.json())
             .then(json => setTickets(json))
     }, [])
+    //console log tickets ;
+    // console.log(tickets);
+
 
 
     return (
+        <>
+        <h2>Žalbe: </h2>
         <div>
             {tickets.map(ticket => {
-                return(
-                    <div>
+                
+               return(
+                    <div className='ticket'>
                         <h2>{ticket.mail} ({ticket.ticketType})</h2>
                         <p>
                             {ticket.description}
@@ -28,7 +34,8 @@ const Tickets = () => {
                 )
             })}
         </div>
+        </>
     );
 }
 
-export default Admin
+export default Tickets

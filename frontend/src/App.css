@@ -47,7 +47,7 @@ element.style{
 }
 .collapsed{
   font-family: "Montserrat", sans-serif;
-  background-color: #00a44d;
+  background-color: #3ccd79;
   padding: 20px 50px;
   width: 100%;
   border-radius: 40px;
@@ -95,7 +95,7 @@ textarea {
 }
 
 .submit{
-  background-color: #00a44d;
+  background-color: #3ccd79;
   color: white;
   font-size: 1.5rem;
   border: none;
@@ -133,14 +133,16 @@ textarea {
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
-  color: #d1d1d1;
+  background-color: #d6ffd6;
+  color: black;
   transition: color 0.2s;
+  padding: 20px 0;
 }
 
 /* Change color on hover */
-.bm-item:hover {
-  color: white;
-}
+
+/* on click change color */
+
 
 /* The rest copied directly from react-burger-menu docs */
 
@@ -171,7 +173,7 @@ textarea {
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #d6ffd6;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -190,3 +192,30 @@ textarea {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+
+
+.admin-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #00a44d;
+  color: white;
+  font-size: 1.5rem;
+  /* border-radius: 40px; */
+  margin-bottom: 35px;
+  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.admin-container{
+  padding: 0 300px;
+  font-family: "Montserrat", sans-serif;
+}
+.admin-container h2{
+  margin-bottom: 30px;
+}
+
