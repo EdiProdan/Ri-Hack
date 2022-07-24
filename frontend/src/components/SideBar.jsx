@@ -9,7 +9,7 @@ export default props => {
         Obavijesti
       </a>
 
-      <a className="menu-item" href="../edukacija.html">
+      <a className="menu-item" href="https://www.cistoca.hr/info-centar/najcesca-pitanja-gradjana-41/kako-ispravno-odvajati-otpad/1489">
         Edukacija
       </a>
 
