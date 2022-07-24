@@ -15,18 +15,21 @@ const ViewMap = () => {
         return container
       })
       setContainers(containersCopy)
-      setPopupInfo(null)
+      setPopupInfo(null);
+      alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!");
+
+      /*
       let res = await fetch('http://localhost:8080/api/full-containers', {
         method:"POST",
+            mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({containerId: containerId})
-      });
+        body: JSON.stringify({containerId: containerId})});
       const content = await res.json();
       console.log(content);
+       */
 
-      alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!")
     }
     useEffect( () => {
       fetch("http://localhost:8080/api/trash-containers", {
