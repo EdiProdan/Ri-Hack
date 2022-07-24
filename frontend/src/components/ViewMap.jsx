@@ -15,18 +15,26 @@ const ViewMap = () => {
         return container
       })
       setContainers(containersCopy)
-      setPopupInfo(null)
+      setPopupInfo(null);
+      alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!");
+
+/*
       let res = await fetch('http://localhost:8080/api/full-containers', {
         method:"POST",
+            mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
         },
-        body: JSON.stringify({containerId: containerId})
+        body: JSON.stringify({containerId: containerId}),
       });
+
       const content = await res.json();
+
       console.log(content);
 
-      alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!")
+ */
+
     }
     useEffect( () => {
       fetch("http://localhost:8080/api/trash-containers", {
@@ -47,11 +55,9 @@ const ViewMap = () => {
           zoom: 12
           }}
           style={{width: "100vw", height:"100vh"}}
-          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapStyle="mapbox://styles/mapbox/light-v9"
           mapboxAccessToken="pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA">
-            <GeolocateControl position="top-left" />
-            <FullscreenControl position="top-left" />
-            <NavigationControl position="top-left" />
+            <GeolocateControl position="top-right" />
             <ScaleControl />
             {containers.map((container) =>
               <Marker longitude={container.locationLong}

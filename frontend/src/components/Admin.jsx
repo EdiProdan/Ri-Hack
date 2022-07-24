@@ -1,10 +1,17 @@
 import React from 'react'
-import HeatMap from './HeatMap'
-
+import Navbar from './Navbar'
+import HeatZone from './HeatZone'
+import Tickets from './Tickets'
 const Admin = () => {
   return (
-    <HeatMap/>
+    <>
+      <Navbar />
+      <div className='admin-container'>
+        <HeatZone />
+        <Tickets />
+    </div>
+    </>
   )
 }
 
-export default Admin
+export default Admin;
