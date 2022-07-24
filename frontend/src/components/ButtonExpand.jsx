@@ -31,7 +31,7 @@ function ButtonExpand() {
 
                         let ticket = {mail: event.target[0].value,
                                     ticketType: event.target[1].value,
-                                    description: event.target[2].value,
+                                    description: event.target[3].value,
                                     locationLat: coords?.latitude,
                                     locationLong: coords?.longitude}
 
