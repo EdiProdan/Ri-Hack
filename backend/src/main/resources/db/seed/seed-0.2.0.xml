@@ -25,7 +25,7 @@
             <column name="location_lat" value="45.356471"/>
             <column name="location_long" value="14.476236"/>
             <column name="ticket_type" value="DIRTY"/>
-            <column name="description" value="Jako prljavo smeće, fuj! 1/10"/>
+            <column name="description" value="Jako prljavo smeće"/>
         </insert>
 
         <insert  dbms="h2"
@@ -34,7 +34,7 @@
             <column name="location_lat" value="45.512738"/>
             <column name="location_long" value="14.5173829"/>
             <column name="ticket_type" value="GENERAL"/>
-            <column name="description" value="Koja vrsta smeća je cura s Filozofskog?"/>
+            <column name="description" value="Smrdi smrdi užasno smrdi"/>
         </insert>
 
     </changeSet>
