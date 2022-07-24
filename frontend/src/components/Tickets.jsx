@@ -26,7 +26,7 @@ const Tickets = () => {
                 
                return(
                     <div className='ticket'>
-                        <h2>{ticket.mail} ({ticket.ticketType})</h2>
+                        <h3>{ticket.mail} ({ticket.ticketType})</h3>
                         <p>
                             {ticket.description}
                         </p>
