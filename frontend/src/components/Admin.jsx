@@ -1,8 +1,9 @@
 import React from 'react'
+import HeatMap from './HeatMap'
 
 const Admin = () => {
   return (
-    <div>Admin</div>
+    <HeatMap/>
   )
 }
 
