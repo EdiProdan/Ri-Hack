@@ -85,7 +85,7 @@ const ViewMap = () => {
               onClose={() => setPopupInfo(null)}
             >
               <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-                <h4>Vrsta smeća: {popupInfo.type}</h4>
+                <h3 style={{marginBottom: "2px"}}>Vrsta smeća: {popupInfo.type}</h3>
                 {popupInfo.marked && <h3 style={{color: "red"}}>Kontejner je prijavljen kao pun</h3>}
                 {!popupInfo.marked && <button style={{backgroundColor: "green", color:"white", padding:"4px"}} onClick={()=>mark(popupInfo.id)}><p>Prijavi kontejner kao prepun</p></button>}
               </div>
