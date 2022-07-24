@@ -11,18 +11,18 @@ const Tickets = () => {
             }
         })
             .then(response => response.json())
-            .then(json => setTickets(json))
+            .then(json => {
+                setTickets(json.sort(ticket => ticket.id).reverse());
+            })
     }, [])
-    //console log tickets ;
-    // console.log(tickets);
-
 
 
     return (
         <>
         <h2>Žalbe: </h2>
         <div>
-            {tickets.map(ticket => {
+            {
+                tickets.map(ticket => {
                 
                return(
                     <div className='ticket'>
