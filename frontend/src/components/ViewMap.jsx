@@ -57,9 +57,7 @@ const ViewMap = () => {
           style={{width: "100vw", height:"100vh"}}
           mapStyle="mapbox://styles/mapbox/streets-v9"
           mapboxAccessToken="pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA">
-            <GeolocateControl position="top-left" />
-            <FullscreenControl position="top-left" />
-            <NavigationControl position="top-left" />
+            <GeolocateControl position="top-right" />
             <ScaleControl />
             {containers.map((container) =>
               <Marker longitude={container.locationLong}
