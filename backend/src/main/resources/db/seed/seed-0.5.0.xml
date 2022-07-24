@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="202207240710" author="dbabic">
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.332331"/>
+            <column name="location_long" value="14.430253"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.329427"/>
+            <column name="location_long" value="14.438804"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.319989"/>
+            <column name="location_long" value="14.475097"/>
+            <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.324350"/>
+            <column name="location_long" value="14.478461"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.336902"/>
+            <column name="location_long" value="14.423131"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.332414"/>
+            <column name="location_long" value="14.424182"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.338831"/>
+            <column name="location_long" value="14.417357"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.335168"/>
+            <column name="location_long" value="14.437489"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.346803"/>
+            <column name="location_long" value="14.436781"/>
+            <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.342234"/>
+            <column name="location_long" value="14.385128"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.341112"/>
+            <column name="location_long" value="14.390684"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.342601"/>
+            <column name="location_long" value="14.372850"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.341436"/>
+            <column name="location_long" value="14.397222"/>
+            <column name="trash_type" value="PAPER"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.344532"/>
+            <column name="location_long" value="14.370444"/>
+            <column name="trash_type" value="GENERAL"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.339987"/>
+            <column name="location_long" value="14.423793"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.330637"/>
+            <column name="location_long" value="14.436800"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.355016"/>
+            <column name="location_long" value="14.375294"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
