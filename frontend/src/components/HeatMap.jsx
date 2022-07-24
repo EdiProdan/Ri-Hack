@@ -74,7 +74,7 @@ const HeatMap = ()=>{
         initialViewState={{
           longitude: 14.44,
           latitude: 45.33,
-          zoom: 10,
+          zoom: 9.5,
         }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_TOKEN}

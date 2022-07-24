@@ -31,7 +31,7 @@ function ButtonExpand() {
 
                         let ticket = {mail: event.target[0].value,
                                     ticketType: event.target[1].value,
-                                    description: event.target[2].value,
+                                    description: event.target[3].value,
                                     locationLat: coords?.latitude,
                                     locationLong: coords?.longitude}
 
@@ -61,8 +61,10 @@ function ButtonExpand() {
                         </select><br></br>
                         <br></br>
 
-                        <label>Priložite sliku:</label><br></br>
-                        <button className='camera' style={{width:"100%", height:"40px", backgroundColor:"transparent", border:"1px solid black" }}>+</button><br></br><br></br>
+                        <div>
+                            <label>Priložite sliku:</label><br></br>
+                            <input type="file" id="image" name="image"/>
+                        </div>
 
                         <label>Opis:</label><br/>
                         <textarea id="description" name="description"></textarea><br/>
