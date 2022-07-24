@@ -61,11 +61,11 @@ const HeatMap = ()=>{
         initialViewState={{
           longitude: 14.44,
           latitude: 45.33,
-          zoom: 12,
+          zoom: 10,
         }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_TOKEN}
-        style={{height:"75vh", width:"75vw"}}
+        style={{height:"45vh", width: "100%", marginTop:"0px", marginBottom:"3vh"}}
       >
         {data && (
           <Source type="geojson" data={data}>
