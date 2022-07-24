@@ -136,11 +136,17 @@ textarea {
   background-color: #d6ffd6;
   color: black;
   transition: color 0.2s;
-  padding: 20px 0;
+  padding: 20px 20px;
+  font-family: "montserrat", sans-serif;
+  
 }
 
 /* Change color on hover */
 
+.bm-item:hover {
+  background-color: #3ccd79;
+  transition: all 0.5s ease;
+}
 /* on click change color */
 
 
@@ -154,10 +160,26 @@ textarea {
   left: 36px;
   top: 36px;
 }
+.bm-burger-button button{
+  position: absolute;
+  left: -12px!important;
+  top: -14px!important;
+  z-index: -1!important;
+  width: 60px!important;
+  height: 60px!important;
+  border-radius: 50%!important;
+  margin: 0px!important;
+  padding: 0px!important;
+  border: none!important;
+  font-size: 0px!important;
+  background: #3ccd79!important;
+  cursor: pointer!important;
+}
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #ffffff;
+  border-radius: 5px;
 }
 
 /* Position and sizing of clickable cross button */
@@ -174,7 +196,7 @@ textarea {
 /* General sidebar styles */
 .bm-menu {
   background: #d6ffd6;
-  padding: 2.5em 1.5em 0;
+  padding: 2.5em  0;
   font-size: 1.15em;
 }
 
@@ -210,6 +232,7 @@ textarea {
   font-family: "Montserrat", sans-serif;
   
 }
+/* //mart as importatn */
 
 .admin-container{
   padding: 0 300px;
@@ -218,6 +241,8 @@ textarea {
 .admin-container h2{
   margin-bottom: 30px;
 }
+
+
 
 .ticket{
   background-color: #d6ffd6;
