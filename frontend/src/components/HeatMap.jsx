@@ -3,6 +3,7 @@ import MapGL, {Source, Layer} from 'react-map-gl';
 import {useState, useEffect, useMemo} from 'react';
 import {heatmapLayer} from '../util/map-style';
 import { generateRijekaCoords } from "../util/coords";
+import coords from './coordinates.json'
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiYm9qYW5wdXZhY2EiLCJhIjoiY2w1eHIydmpoMHdndzNibnBuOHA0OWtzcSJ9.9EKcXB_wGL918f5HDKd2mA'; // Set your mapbox token here
 
@@ -38,13 +39,9 @@ const HeatMap = ()=>{
       const endTime = features[0].properties.time;
       const startTime = features[features.length - 1].properties.time;
 
-      let featuresCopy = features.map(feature => {
-      feature.geometry.coordinates = generateRijekaCoords();
-   
-      return feature;
-      })
       let jsonCopy = json
-      jsonCopy.features = featuresCopy.slice(0, 40)
+      jsonCopy.features = coords.features
+
       setTimeRange([startTime, endTime]);
       setEarthQuakes(jsonCopy);
       selectTime(endTime);
