@@ -12,7 +12,7 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.312073"/>
+            <column name="location_lat" value="45.332073"/>
             <column name="location_long" value="14.440162"/>
             <column name="trash_type" value="BIO"/>
         </insert>
@@ -89,7 +89,7 @@
 
         <insert  dbms="h2"
                  tableName="trash_container">
-            <column name="location_lat" value="45.325772"/>
+            <column name="location_lat" value="45.345772"/>
             <column name="location_long" value="14.456887"/>
             <column name="trash_type" value="BIO"/>
         </insert>
@@ -105,14 +105,28 @@
                  tableName="trash_container">
             <column name="location_lat" value="45.332035"/>
             <column name="location_long" value="14.465086"/>
-            <column name="trash_type" value="PAPER"/>
+            <column name="trash_type" value="GENERAL"/>
         </insert>
 
         <insert  dbms="h2"
                  tableName="trash_container">
             <column name="location_lat" value="45.341651"/>
             <column name="location_long" value="14.394987"/>
-            <column name="trash_type" value="PAPER"/>
+            <column name="trash_type" value="BIO"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.341040"/>
+            <column name="location_long" value="14.410799"/>
+            <column name="trash_type" value="GLASS"/>
+        </insert>
+
+        <insert  dbms="h2"
+                 tableName="trash_container">
+            <column name="location_lat" value="45.351156"/>
+            <column name="location_long" value="14.407666"/>
+            <column name="trash_type" value="PLASTIC_METAL"/>
         </insert>
 
     </changeSet>
