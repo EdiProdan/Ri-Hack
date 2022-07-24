@@ -9,7 +9,7 @@ export default props => {
         Obavijesti
       </a>
 
-      <a className="menu-item" href="/edukacija">
+      <a className="menu-item" href="../edukacija.html">
         Edukacija
       </a>
 
