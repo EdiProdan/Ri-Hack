@@ -18,17 +18,22 @@ const ViewMap = () => {
       setPopupInfo(null);
       alert("Administratori su obavješteni o situaciji. Zahvaljujemo na prijavi i trudu da naš grad učinite čišćim!");
 
-      /*
+/*
       let res = await fetch('http://localhost:8080/api/full-containers', {
         method:"POST",
             mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
         },
-        body: JSON.stringify({containerId: containerId})});
+        body: JSON.stringify({containerId: containerId}),
+      });
+
       const content = await res.json();
+
       console.log(content);
-       */
+
+ */
 
     }
     useEffect( () => {
